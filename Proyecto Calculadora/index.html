@@ -12,7 +12,7 @@
         <p>A ver si sale este msg ahora</p>
         <p>Sale ahi?</p>
         <div class="numberfield">
-            <input type="number" id="numberfield">
+            <input type="number" id="numberfield" value="0">
         </div>
         <div class="contenedor_calculadora">
             <div class="digitos">
@@ -26,8 +26,12 @@
                 <div id="btn" value="8">8</div>
                 <div id="btn" value="9">9</div>
                 <div id="btn" value="0">0</div>
-                <div id="btn">+</div>
-                <div id="btn">-</div>
+                <div id="operator" data-value="+" onclick="operador()">+</div>
+                <div id="operator" data-value="-" onclick="operador()">-</div>
+                <div id="operator" data-value="*" onclick="operador()">*</div>
+                <div id="operator" data-value="/" onclick="operador()">/</div>
+                <div id="clear" onclick="borrar()">⌫</div>
+                <div id="result" onclick="resultado()">=</div>
             </div>
         </div>
         <script src="index.js"></script> <!-- El enlace al script va al final, para que 
