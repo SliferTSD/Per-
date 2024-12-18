@@ -1,10 +1,8 @@
 window.alert("Bienvenido papu a la calculadora fantasticamente megagaláctica");
-
 let value1 = null;
 let value2 = null;
 let operator = null;
 let result = null;
-
 document.getElementById('clear').onclick = function () {
     document.getElementById("numberfield").value = 0;
     value1 = null;
@@ -12,13 +10,11 @@ document.getElementById('clear').onclick = function () {
     operator = null;
     result = null;
 };
-
 const buttons = document.querySelectorAll(".btn");
 buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
         const value = btn.getAttribute('data-value');
         const display = document.getElementById("numberfield");
-
         if (!isNaN(value) || value === '.') {
             if (display.value === "0" || (operator && value2 === null)) {
                 display.value = value;
@@ -40,7 +36,6 @@ buttons.forEach((btn) => {
         }
     });
 });
-
 function calcularResultado() {
     if (value1 !== null && value2 !== null && operator) {
         switch (operator) {
@@ -63,5 +58,4 @@ function calcularResultado() {
         operator = null;
     }
 }
-
 document.getElementById("result").onclick = calcularResultado;
